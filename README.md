@@ -1,1 +1,1 @@
-# javascript-course
+# javascript-course Slider Pure JavaScript

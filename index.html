@@ -7,8 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello My Course </title>
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/slider.css">
 </head>
 <body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="slider">
+                    <div class="item-slider active">
+                        <img src="public/img/1.jpg" alt="" class="img-fluid">
+                        <p>
+                            Learning To node js 
+                        </p>
+                    </div>
+
+                    <div class="item-slider">
+                        <img src="public/img/2.jpg" alt="" class="img-fluid">
+                        <p>
+                            Learning To JavaScript 
+                        </p>
+                    </div>
+
+                    <div class="item-slider">
+                        <img src="public/img/3.jpg" alt="" class="img-fluid">
+                        <p>
+                            Learning To Angular 
+                        </p>
+                    </div>
+                    <a class="item-slider-link" onclick="arrowLeft()">&#8592;</a>
+                    <a class="item-slider-link" onclick="arrowRight()">&#8594;</a>
+                </div>
+
+                <div class="dots">
+                    <span class="dot active-dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <script src="script.js"></script>
