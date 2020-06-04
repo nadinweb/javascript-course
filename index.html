@@ -1,16 +1,92 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello My Course </title>
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <style>
+        .slider {
+            width: 100%;
+            position: relative;
+        }
+
+        .item-slider {
+            display: none;
+            animation: fade 1s;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .dots {
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background-color: #222;
+            border-radius: 50%;
+        }
+        .activeDots{
+            background-color: #888;
+        }
+
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <ul class="slider">
+                    <li class="item-slider active">
+                        <img src="https://roocket.ir/public/images/2020/4/28/node.png" alt="">
+                    </li>
+                    <li class="item-slider">
+                        <img src="https://roocket.ir/public/image/2018/9/23/flutter-1.png" alt="">
+                    </li>
+                    <li class="item-slider">
+                        <img src="https://roocket.ir/public/image/2018/4/10/nodejs-1.png" alt="">
+                    </li>
+                    <li class="item-slider">
+                        <img src="https://roocket.ir/public/image/2018/1/21/1516505980bootstrap4-cover-1.jpg" alt="">
+                    </li>
 
-<script src="script.js"></script>
+                    <button onclick="arrowPrev()" class="btn btn-sm btn-secondary">Arrow Prev</button>
+                    <button onclick="arrowNext()" class="btn btn-sm btn-secondary">Arrow Next</button>
+                </ul>
+
+                <div class="dots">
+                    <span class="dot activeDots"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
